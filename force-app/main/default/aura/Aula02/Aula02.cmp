@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+	
+    <lightning:recordEditForm aura:id="recordEditForm" objectApiName="Contact" onsuccess="{!c.showToast}">
+        <lightning:messages />
+        <lightning:outputField fieldName="AccountId" />
+        <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="Phone" />
+        <lightning:inputField fieldName="EmaiGl" />
+        <lightning:button class="slds-m-top_small" type="submit"  label="crete new" onclick="{!c.showToast}" />
+    </lightning:recordEditForm>
+
+
+    
+</aura:component>
+
+<!-->
+
+<-->

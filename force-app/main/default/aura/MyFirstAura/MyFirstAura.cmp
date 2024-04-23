@@ -1,0 +1,38 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    
+    <!-- Definição do atributo 'helloworld' do tipo 'string' com um valor padrão -->
+    <aura:attribute name="helloworld" type="string" default="Hello world" Default="Esse é um texto default"/>
+    
+    <!--  atributo  do tipo integer  -->
+    <aura:attribute name="numero" type="Integer" default="10" description="Este é um atributo do tipo Integer."/>
+
+    <!-- atributo do tipo boolean -->
+    <aura:attribute name="ativo" type="Boolean" default="true" description="Este é um atributo do tipo Boolean."/>
+    
+    <!-- atributo para armazenar a imagem atual -->
+    <aura:attribute name="imagemAtual" type="String" default="{!$Resource.salesforceLogo}" />
+    
+    <!-- atributo para a segunda imagem -->
+    <aura:attribute name="imagem2" type="String" default="{!$Resource.imagem2}" />
+
+    <!-- Início da marcação HTML -->
+    <div class="slds-box slds-theme_default">        
+        <h1>Saudações Salesforce: {!v.helloworld}</h1>	
+        <p>Atributo integer: {!v.numero}</p>
+        <p>Atributo boolean: {!v.ativo}</p>
+        
+        <div>
+            <lightning:button variant="brand-outline" label="Clique aqui" title="Brand action" onclick="{! c.handleClick }" />
+        </div>
+        
+        <div>
+            <aura:if isTrue="{!v.ativo}">
+                <img src="{!v.imagemAtual}" />
+            <aura:set attribute="else">
+                <img src="{!v.imagem2}" />
+            </aura:set>
+            </aura:if>
+        </div>
+    </div>
+    <!-- Fim da marcação HTML -->
+</aura:component>
