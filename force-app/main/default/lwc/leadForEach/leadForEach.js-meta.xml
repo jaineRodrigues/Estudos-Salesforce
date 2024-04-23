@@ -8,10 +8,4 @@
     <target>lightning__AppPage</target>
     <target>lightning__HomePage</target>
 </targets>
-
-<!-- nome do aplicativo -->
-<masterLabel>First component</masterLabel> 
-
 </LightningComponentBundle>
-
-<!-- Trocar informaçoes com as minhas organizações -->
