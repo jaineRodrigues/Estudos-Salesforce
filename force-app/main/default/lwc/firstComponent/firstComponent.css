@@ -1,11 +1,15 @@
-input{
-    color: blue;
-}
-
-.container{
-    background-color: bisque;
+.container {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 2rem
+    align-items: center;
+    background-color: aliceblue;
+    padding: 2rem 0;
+}
+
+.badge {
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 0;
+    margin-right: .2rem; 
+    background-color: bisque;
 }

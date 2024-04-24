@@ -1,7 +1,8 @@
 <template>
 
     <lightning-card  title="Novo Contato" icon-name="standard:account" alternative-text="Image file">
-    <div class="slds-m-around_medium">
+        <section class="container">
+    <div class="slds-m-around_medium container">
     
     <lightning-record-edit-form object-api-name="Contact" onsuccess={handleContact}>
 
@@ -9,6 +10,8 @@
         <lightning-input-field field-name="Name"> </lightning-input-field>
         <lightning-input-field field-name="Phone"> </lightning-input-field>
         <lightning-input-field field-name="AccountId"> </lightning-input-field>
+        
+        <div class="bctn">
         <lightning-button
             class="slds-m-top_small"
             variant="brand"
@@ -17,8 +20,11 @@
             label="Salvar"
         >
         </lightning-button>
+    </div>
+    
     </lightning-record-edit-form>
 </div>
+</section>
 </lightning-card>
 
 </template>

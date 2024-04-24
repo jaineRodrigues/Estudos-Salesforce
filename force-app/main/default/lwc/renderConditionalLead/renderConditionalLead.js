@@ -5,8 +5,9 @@ export default class LeadConditionalRendering extends LightningElement {
     @track areDetailsVisible = false;
     
   handleChange(event) {
-    const showDetailLead= event.detail.id;
     this.areDetailsVisible = event.target.checked;
   }
 }
+
+
 

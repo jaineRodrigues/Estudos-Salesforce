@@ -1,3 +1,11 @@
-.slds-m-top_small{
-    flex: end;
+.container{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.bctn{
+    margin-left: 20rem;
+    align-self: flex-end;
 }

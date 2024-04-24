@@ -1,3 +1,14 @@
+<!-- As diretivas de modelo HTML são atributos especiais que adicionam comportamento dinâmico a um modelo -->
 <template>
-    
-</template>
+    <lightning-card title="HelloIterator" icon-name="custom:custom4">
+      <ul class="slds-m-around_medium">
+        <template iterator:it={leads}>
+          <li key={it.value.Id}>
+            <div lwc:if={it.first} class="list-first"></div>
+            {it.value.Name},{it.value.Email}, {it.value.Company}
+            <div lwc:if={it.last} class="list-last"></div>
+          </li>
+        </template>
+      </ul>
+    </lightning-card>
+  </template>

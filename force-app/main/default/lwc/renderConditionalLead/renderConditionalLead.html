@@ -1,3 +1,5 @@
+<!-- As diretivas de modelo HTML são atributos especiais que adicionam comportamento dinâmico a um modelo -->
+
 <template>
     <lightning-card title="LeadConditionalRendering" icon-name="action:preview">
       <div class="slds-m-around_medium">
@@ -15,14 +17,12 @@
           <div class="slds-m-vertical_medium">
             <lightning-output-field field-name="LeadId"></lightning-output-field>
             <lightning-input-field field-name="Name"> </lightning-input-field>
-            <lightning-input-field field-name="Email"> 
-                <!-- <lightning-icon icon-name="standard:email" alternative-text="Email" title="Email"></lightning-icon> -->
-            </lightning-input-field>
+            <lightning-input-field field-name="Email"> </lightning-input-field>
             <lightning-input-field field-name="Company"> </lightning-input-field>
           </div>
         </template>
       </lightning-record-edit-form>
       </div>
-      
+
     </lightning-card>
   </template>
