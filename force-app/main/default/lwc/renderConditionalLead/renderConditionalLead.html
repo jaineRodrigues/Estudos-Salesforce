@@ -4,15 +4,14 @@
     <lightning-card title="LeadConditionalRendering" icon-name="action:preview">
       <div class="slds-m-around_medium">
 
-        <lightning-record-edit-form
-        record-id={recordId} object-api-name="Lead"
-        >
+        <lightning-record-edit-form record-id={recordId} object-api-name="Lead">
         <lightning-input
           type="checkbox"
-          label="Show details"
+          label="Ver detalhes do lead"
           onchange={handleChange}
         ></lightning-input>
-        <template lwc:if={areDetailsVisible}>
+        <!-- Se a condicional for verdadeira rendeniza o conteudo dentro do template -->
+        <template lwc:if={areDetailsVisible}> 
 
           <div class="slds-m-vertical_medium">
             <lightning-output-field field-name="LeadId"></lightning-output-field>
@@ -20,6 +19,7 @@
             <lightning-input-field field-name="Email"> </lightning-input-field>
             <lightning-input-field field-name="Company"> </lightning-input-field>
           </div>
+          
         </template>
       </lightning-record-edit-form>
       </div>

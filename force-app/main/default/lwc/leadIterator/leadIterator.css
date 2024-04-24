@@ -1,8 +1,10 @@
 .list-first {
     padding-top: 5px;
+    border-bottom: 1px solid #f7e0be;
 }
 
 .list-last {
+    border-bottom: 1px solid #f7e0be;
     padding-bottom: 5px;
 }
 
@@ -10,4 +12,5 @@ ul {
     list-style: none;
     background-color: aliceblue;
     padding: 2rem 0;
+    text-align: center;
 }

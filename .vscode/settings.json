@@ -4,5 +4,6 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "editor.fontSize": 12
+  "editor.fontSize": 14,
+  "editor.minimap.sectionHeaderFontSize": 20
 }

@@ -3,7 +3,7 @@
     <lightning-card title="HelloForEach" icon-name="custom:custom14">
       <ul class="slds-m-around_medium">
         <template for:each={leads} for:item="lead">
-          <li key={lead.Id}>{lead.Name}, {lead.Email}</li>
+          <li key={lead.Id}> <strong>Nome:</strong> {lead.Name}, <strong>Email:</strong> {lead.Email}</li>
         </template>
       </ul>
     </lightning-card>

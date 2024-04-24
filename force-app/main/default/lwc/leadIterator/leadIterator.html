@@ -5,10 +5,10 @@
         <template iterator:it={leads}>
           <li key={it.value.Id}>
             <div lwc:if={it.first} class="list-first"></div>
-            {it.value.Name},{it.value.Email}, {it.value.Company}
+          <strong> Nome:</strong>  {it.value.Name},  <strong>Email</strong> {it.value.Email},  <strong>Empresa</strong>  {it.value.Company}
             <div lwc:if={it.last} class="list-last"></div>
           </li>
         </template>
-      </ul>
-    </lightning-card>
-  </template>
+</ul>
+</lightning-card>
+</template>

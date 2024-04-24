@@ -17,7 +17,7 @@ export default class LeadIterator extends LightningElement {
         },
         {
             Id: '003848991274589432',
-            Name: 'Jennifer Wu',
+            Name: 'Marry Wu',
             Email: 'ane@me.com',
             Company: 'DBC'
         }

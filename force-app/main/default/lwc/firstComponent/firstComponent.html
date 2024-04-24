@@ -1,14 +1,15 @@
 <template>
-    <!-- Permite as tags do HTML5 e as tags do SLDS do salesforce -->
-    
     <lightning-card title="Hello" icon-name="custom:custom1">
-        <lightning-badge label= {description} class="badge"> </lightning-badge>
+        <lightning-badge label={description} class="badge"></lightning-badge>
         <div class="container">
-            <div>Name: {name}</div>
-            <div>Company: {company}</div>
-            <div>Description: {description}</div>
-            <div>Salary: {salary}</div>
+            <div class="column">
+                <div>Name: {name}</div>
+                <div>Company: {company}</div>
+            </div>
+            <div class="column">
+                <div>Description: {description}</div>
+                <div>Salary: {salary}</div>
+            </div>
         </div>
     </lightning-card>
-
 </template>
