@@ -1,0 +1,12 @@
+public with sharing class recentContacWidgetController {
+    // expoe o metodo pra ser usado no LWC
+    @AuraEnabled(cacheable=true) 
+    public static List<Contact> getContacts(){
+        return [
+            SELECT Id, Name, Email
+            FROM Contacts
+            ORDER BY Creadted DESC 
+            LIMIT 3
+        ];
+    }
+}
