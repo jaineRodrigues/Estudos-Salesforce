@@ -4,8 +4,8 @@ public with sharing class recentContacWidgetController {
     public static List<Contact> getContacts(){
         return [
             SELECT Id, Name, Email
-            FROM Contacts
-            ORDER BY Creadted DESC 
+            FROM Contact
+            ORDER BY CreatedDate DESC 
             LIMIT 3
         ];
     }

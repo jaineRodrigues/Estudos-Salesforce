@@ -1,14 +1,22 @@
 
 <template>
     <lightning-card title="HelloForEach" icon-name="custom:custom14">
-      <ul class="slds-m-around_medium">
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
         <template for:each={wiredLeads} for:item="lead">
-          <li key={lead.Id}> 
-            <strong>Nome:</strong> {lead.Name}, 
-            <strong>Email:</strong> {lead.Email},
-          </li>
+          <tr key={lead.Id}> 
+            <td>{lead.Name}</td> 
+            <td>{lead.Email}</td>
+          </tr>
         </template>
-      </ul>
+      </tbody>
+    </table>
     </lightning-card>
   </template>
 

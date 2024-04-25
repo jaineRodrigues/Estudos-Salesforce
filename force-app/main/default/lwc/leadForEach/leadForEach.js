@@ -9,6 +9,7 @@ export default class LeadForEach extends LightningElement {
         if (data) {
             this.wiredLeads = data;
         } else if (error) {
+            alert("Erro ao carregar leads");
             console.error('Erro ao carregar leads:', error);
         }
     }

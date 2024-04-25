@@ -4,8 +4,8 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class Inicio extends LightningElement {
    
     handleContact(){
-        const inputFields = this.template.querySelectorAll('lightning-input-field');
-        if(inputFields){
+        const inputFields = this.template.querySelectorAll('lightning-input-field');//seleciona todos os campos de engtrada
+        if(inputFields){//verifica se existe campos de entrada selecionados
             inputFields.forEach(
                 field =>{
                     field.reset();

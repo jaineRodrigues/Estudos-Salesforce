@@ -1,0 +1,28 @@
+<template>
+  <lightning-card title="Carrosel bonito e cheiroso" icon-name="custom:custom1">
+  <section class="container">
+    <lightning-carousel disable-auto-refresh={disableAutoRefresh} disable-auto-scroll={disableAutoScroll}>
+        <lightning-carousel-image class="img"
+            src={carosselImg2}
+            description="Mascotes Salesforce"
+            alternative-text="First card accessible description."
+            href="https://www.salesforce.com">
+        </lightning-carousel-image>
+
+        <lightning-carousel-image class="img"
+            src={carosselImg1}
+            description="Mascotes Salesforce"
+            alternative-text="Second card accessible description."
+            href="https://www.salesforce.com">
+        </lightning-carousel-image>
+
+        <lightning-carousel-image class="img"
+            src={carosselImg3}
+            description="Mascotes Salesforce"
+            alternative-text="Third card accessible description."
+            href="https://www.salesforce.com">
+        </lightning-carousel-image>
+    </lightning-carousel>
+  </section>
+</lightning-card>
+</template>

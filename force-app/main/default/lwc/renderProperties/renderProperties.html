@@ -1,38 +1,62 @@
-<template >
-  <lightning-card title="Bem vindo!" icon-name="custom:custom1">
-    <!-- Renderiza os detalhes da empresa somente se areEmployDetailsVisible for verdadeiro -->
 
-    <h2 class="title">Empresa</h2>
-    <template if:true={areEmployDetailsVisible}>
-      <div class="container-div">
-        <lightning-input label="Empresa" value={empresa.nome}></lightning-input>
-  <lightning-input label="CNPJ" value={empresa.cnpj}></lightning-input>
-        <lightning-input label="Endereço" value={empresa.endereco}></lightning-input>
-      </div>
-    </template>
-    
-    <div class="btn-container">
-      <div></div>
-      <lightning-button class="bctn" label="Ocultar detalhes" onclick={handleDetailsEmploys}></lightning-button>
-    </div>
-   
-    <h2 class="title">Produto</h2>
-    <div class="container-div">
-      <lightning-input label="Nome" value={produto.nome}></lightning-input>
-      <lightning-input label="Descrição" value={produto.descricao}></lightning-input>
-      <lightning-input label="Preço" value={produto.preco}></lightning-input>
-    </div>
 
-    <h2 class="title">Promoção</h2>
-    <template if:true={arePromotionDetailsVisible}>
-      <div class="container-div">
-        <lightning-input label="Empresa" value={promocao.nome}></lightning-input>
-        <lightning-input label="Oferta 2" value={promocao.oferta1}></lightning-input>
-        <lightning-input label="Oferta 1" value={promocao.oferta2}></lightning-input>
-      </div>
-    </template>
-    <lightning-button class="bctn" label="Ocultar detalhes" onclick={handleDetailsPromotion}></lightning-button>
+
+<template>
+  <lightning-card title="Bem vindo!" icon-name="Standard:note">
+      <h2 class="title">Empresa</h2>
+
+          <!-- START: TOOGLE -->
+          <div class="btn-container">
+            <div class="slds-form-element">
+              <label class="slds-checkbox_toggle slds-grid">
+                <span class="slds-form-element__label slds-m-bottom_none"></span>
+                <input type="checkbox" name="toggle-details" checked={areEmployDetailsVisible} onchange={handleDetailsEmploys}></input>
+                <span  class="slds-checkbox_faux_container">
+                  <span class="slds-checkbox_faux"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <!-- END: TOOGLE -->
+
+      <template if:true={areEmployDetailsVisible}>
+        <div class="div-col">
+          <p>Nome: {empresa.nome}</p>
+          <p>CNPJ: {empresa.cnpj}</p>
+          <p>Endereço: {empresa.endereco}</p>
+        </div>
+      </template>
+      
    
+      <h2 class="title">Produto</h2>
+      <div class="div-col">
+        <p>Nome: {produto.nome}</p>
+        <p>Descrição: {produto.descricao}</p>
+        <p>Preço: {produto.preco}</p>
+      </div>
+
+      <h2 class="title">Promoção</h2>
+      <!-- START: TOOGLE -->
+      <div class="btn-container">
+        <div class="slds-form-element">
+          <label class="slds-checkbox_toggle slds-grid">
+            <span class="slds-form-element__label slds-m-bottom_none"></span>
+            <input type="checkbox" name="toggle-details" checked={arePromotionDetailsVisible} onchange={handleDetailsPromotion}></input>
+            <span class="slds-checkbox_faux_container">
+              <span class="slds-checkbox_faux"></span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <!-- END: TOOGLE -->
+      <template if:true={arePromotionDetailsVisible}>
+        <div class="div-col">
+          <p>Nome: {promocao.nome}</p>
+          <p>Oferta1: {promocao.oferta1}</p>
+          <p>Oferta2: {promocao.oferta1}</p>
+        </div>
+      </template>
+
   </lightning-card>
-</template>
 
+</template>
