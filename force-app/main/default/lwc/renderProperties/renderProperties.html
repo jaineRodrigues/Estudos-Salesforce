@@ -1,61 +1,60 @@
-
-
-
 <template>
-  <lightning-card title="Bem vindo!" icon-name="Standard:note">
-      <h2 class="title">Empresa</h2>
+  <lightning-card title="Bem vindo!" icon-name="standard:note">
+    <h2 class="title">Empresa</h2>
 
-          <!-- START: TOOGLE -->
-          <div class="btn-container">
-            <div class="slds-form-element">
-              <label class="slds-checkbox_toggle slds-grid">
-                <span class="slds-form-element__label slds-m-bottom_none"></span>
-                <input type="checkbox" name="toggle-details" checked={areEmployDetailsVisible} onchange={handleDetailsEmploys}></input>
-                <span  class="slds-checkbox_faux_container">
-                  <span class="slds-checkbox_faux"></span>
-                </span>
-              </label>
-            </div>
-          </div>
-          <!-- END: TOOGLE -->
+    <!-- START: TOOGLE -->
+    <div class="btn-container">
+      <div class="slds-form-element">
+        <label class="slds-checkbox_toggle slds-grid">
+          <span class="slds-form-element__label slds-m-bottom_none"></span>
+          <input type="checkbox" name="toggle-details" checked={areEmployDetailsVisible}
+            onchange={handleDetailsEmploys}></input>
+          <span class="slds-checkbox_faux_container">
+            <span class="slds-checkbox_faux"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <!-- END: TOOGLE -->
 
-      <template if:true={areEmployDetailsVisible}>
-        <div class="div-col">
-          <p>Nome: {empresa.nome}</p>
-          <p>CNPJ: {empresa.cnpj}</p>
-          <p>Endereço: {empresa.endereco}</p>
-        </div>
-      </template>
-      
-   
-      <h2 class="title">Produto</h2>
+    <template if:true={areEmployDetailsVisible}>
       <div class="div-col">
-        <p>Nome: {produto.nome}</p>
-        <p>Descrição: {produto.descricao}</p>
-        <p>Preço: {produto.preco}</p>
+        <p>Nome: {empresa.nome}</p>
+        <p>CNPJ: {empresa.cnpj}</p>
+        <p>Endereço: {empresa.endereco}</p>
       </div>
+    </template>
 
-      <h2 class="title">Promoção</h2>
-      <!-- START: TOOGLE -->
-      <div class="btn-container">
-        <div class="slds-form-element">
-          <label class="slds-checkbox_toggle slds-grid">
-            <span class="slds-form-element__label slds-m-bottom_none"></span>
-            <input type="checkbox" name="toggle-details" checked={arePromotionDetailsVisible} onchange={handleDetailsPromotion}></input>
-            <span class="slds-checkbox_faux_container">
-              <span class="slds-checkbox_faux"></span>
-            </span>
-          </label>
-        </div>
+
+    <h2 class="title">Produto</h2>
+    <div class="div-col">
+      <p>Nome: {produto.nome}</p>
+      <p>Descrição: {produto.descricao}</p>
+      <p>Preço: {produto.preco}</p>
+    </div>
+
+    <h2 class="title">Promoção</h2>
+    <!-- START: TOOGLE -->
+    <div class="btn-container">
+      <div class="slds-form-element">
+        <label class="slds-checkbox_toggle slds-grid">
+          <span class="slds-form-element__label slds-m-bottom_none"></span>
+          <input type="checkbox" name="toggle-details" checked={arePromotionDetailsVisible}
+            onchange={handleDetailsPromotion}></input>
+          <span class="slds-checkbox_faux_container">
+            <span class="slds-checkbox_faux"></span>
+          </span>
+        </label>
       </div>
-      <!-- END: TOOGLE -->
-      <template if:true={arePromotionDetailsVisible}>
-        <div class="div-col">
-          <p>Nome: {promocao.nome}</p>
-          <p>Oferta1: {promocao.oferta1}</p>
-          <p>Oferta2: {promocao.oferta1}</p>
-        </div>
-      </template>
+    </div>
+    <!-- END: TOOGLE -->
+    <template if:true={arePromotionDetailsVisible}>
+      <div class="div-col">
+        <p>Nome: {promocao.nome}</p>
+        <p>Oferta1: {promocao.oferta1}</p>
+        <p>Oferta2: {promocao.oferta1}</p>
+      </div>
+    </template>
 
   </lightning-card>
 

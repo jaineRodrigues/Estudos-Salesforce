@@ -1,10 +1,12 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement, track, api } from 'lwc';
 
 export default class ChildComponent extends LightningElement {
-    // quando uso @track, a variable  renderiza obligatoriamente
+    // Ao usar @track, a variável é renderizada automaticamente quando alterada
     @track message;
 
-    changeMessage(toString){
+    @api
+    changeMessage(toString) {
         this.message = toString.toUpperCase();
     }
 }
+

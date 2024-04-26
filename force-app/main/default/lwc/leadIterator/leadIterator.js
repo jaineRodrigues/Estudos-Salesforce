@@ -1,25 +1,15 @@
-import { LightningElement } from 'lwc';
-
+import { LightningElement, wire } from 'lwc';
+import getLeads from '@salesforce/apex/leadIterator.getleads';
 export default class LeadIterator extends LightningElement {
-    leads = [
-        {
-            Id: '003171931112854375',
-            Name: 'Amy Taylor',
-            Email: 'ane@me.com',
-            Company: 'DBC'
-        },
-        
-        {
-            Id: '003848991274589432',
-            Name: 'Jennifer Wu',
-            Email: 'ane@me.com',
-            Company: 'DBC'
-        },
-        {
-            Id: '003848991274589432',
-            Name: 'Marry Wu',
-            Email: 'ane@me.com',
-            Company: 'DBC'
+    wireLeads;
+
+    @wire(getLeads)
+    wireLeadsData({error, data}) {
+        if (data) {
+            this.wireLeads = data;
+        } else if (error) {
+            alert("Erro ao carregar leads");
+            console.error('Erro ao carregar leads:', error);
         }
-    ];
+    }
 }
