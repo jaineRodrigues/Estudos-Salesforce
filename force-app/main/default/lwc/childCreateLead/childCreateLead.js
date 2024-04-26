@@ -1,8 +1,8 @@
 import { LightningElement, api } from 'lwc';
 
 export default class ChildCreateLead extends LightningElement {
-  @api Name;
-  @api Company;
-  @api status;
+  sendData(event){
+    this.template.querySelector('c-parent-create-lead');
+  }
 }
 

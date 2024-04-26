@@ -1,7 +1,10 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 // import getRecords from '@salesforce/apex/getRecordsLead.getRecords';
 
 export default class ParentCreateLead extends LightningElement {
+  @api Name;
+  @api Company;
+  @api Status;
 
   // wireLeads;
 

@@ -1,8 +1,43 @@
-<template>
-  <!-- acessa as informaçoes do filho aqui -->
+<!-- <template>
+
   <c-parent-create-lead>
     <p>Name ="John Doe"</p>
     <p>Company ="Globe"</p>
     <p> Status ="Em Progresso"</p>
   </c-parent-create-lead>
+</template> -->
+
+<template>
+
+  <lightning-card  title="Componente pai" icon-name="standard:lead" alternative-text="Image file">
+      <section class="container">
+  <div class="slds-m-around_medium container">
+  
+  <lightning-record-edit-form object-api-name="Lead" onsuccess={handleContact}>
+      <lightning-messages> </lightning-messages>
+      <lightning-input-field field-name="Name"> </lightning-input-field>
+      <lightning-input-field field-name="Company"> </lightning-input-field>
+      <lightning-input-field field-name="Status"> </lightning-input-field>
+      
+      <div class="bctn">
+      <lightning-button
+      onchange={sendData}
+          class="slds-m-top_small"
+          variant="brand"
+          type="submit"
+          name="update"
+          label="Salvar"
+      >
+      </lightning-button>
+  </div>
+
+  <c-child-create-lead></c-child-create-lead>
+  
+  </lightning-record-edit-form>
+
+
+</div>
+</section>
+</lightning-card>
+
 </template>
