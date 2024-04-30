@@ -1,16 +1,7 @@
 <template>
-    <lightning-card title="Parent to Child Demo">
-        <lightning-layout>
-            <lightning-layout-item flexibility="auto" padding="around-small">
-                <lightning-input label="Enter the message" onchange={handleChangeEvent}></lightning-input>
+  <div class="slds-m-around_medium">
+    Value from Child: {msg}
+    <c-child-component></c-child-component>
 
-            </lightning-layout-item>
-            <lightning-layout-item flexibility="auto" padding="around-small">
-                <c-child-component></c-child-component>
-            </lightning-layout-item>
-
-        </lightning-layout>
-
-
-    </lightning-card>
+  </div>
 </template>

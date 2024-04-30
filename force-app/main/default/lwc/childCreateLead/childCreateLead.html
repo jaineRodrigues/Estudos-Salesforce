@@ -1,26 +1,22 @@
 <template>
-  <!-- FILHO MANDA PARA O PAI EXIBIR -->
   <lightning-card title="Registro recebido do pai" icon-name="standard:lead">
-    <!-- <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
       <thead>
         <tr>
-
           <th>Nome</th>
-          <th>Company</th>
+          <th>Empresa</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
-        <template for:each={wiredLeads} for:item="lead">
-          <tr key={lead.Id}>
-
-            <td>{lead.Name}</td>
-            <td>{lead.Company}</td>
-            <td>{lead.Status}</td>
-          </tr>
-        </template>
+        <tr>
+          <td>{leadName}</td>
+          <td>{leadCompany}</td>
+          <td>{leadStatus}</td>
+        </tr>
       </tbody>
-    </table> -->
-    
+    </table>
+
+    <!-- <lightning-button label="Criar Lead" onclick={handleCreateLead}></lightning-button> -->
   </lightning-card>
 </template>
